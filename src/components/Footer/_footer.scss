@@ -1,0 +1,161 @@
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: $hero-black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .container{
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .container .info{
+  margin-right: 30px;
+}
+
+footer .container .info.aboutus{
+  width: 40%;
+}
+
+footer .container h2{
+  position: relative;
+  color: $white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .container h2:before{
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: $button-bg;
+}
+
+footer p{
+  color: #999;
+}
+
+.icon{
+  margin-top: 20px;
+  display: flex;
+}
+
+.icon li{
+  list-style: none;
+}
+
+.icon li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.icon li a:hover{
+  background: $button-bg;
+}
+
+.icon li a .fab{
+  color: $white;
+  font-size: 20px;
+}
+
+.quickLinks{
+  position: relative;
+  width: 25%;
+}
+
+.quickLinks ul li{
+  list-style: none;
+}
+
+.quickLinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover{
+  color: $button-bg;
+}
+
+.contact{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .data{
+  position: relative;
+}
+
+.contact .data li{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contact .data li span:nth-child(1){
+  color: $white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .data li span{
+  color: #999;
+}
+
+.contact .data li a{
+  color: #999;
+  text-decoration: none;
+}
+
+.contact .data li a:hover{
+  color: $button-bg;
+}
+
+.copyrightText{
+  width: 100%;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+
+@include breakpoints-down(medium) {
+  footer{
+    padding: 40px;
+  }
+  
+  footer .container{
+    flex-direction: column;
+  }
+
+  footer .container .info{
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  footer .container .info.aboutus,
+  .quickLinks,
+  .contact{
+    width: 100%;
+  }
+
+  .copyrightText{
+    padding: 8px 40px;
+  }
+}

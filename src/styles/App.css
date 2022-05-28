@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@500;700&display=swap");
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header_nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 0px 7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+  height: 80px;
+}
+
+.header_nav img.logo {
+  height: 80px;
+  width: 100%;
+  padding: 4% 0%;
+}
+
+.header_nav > .navbar ul {
+  list-style: none;
+}
+
+.header_nav > .navbar ul li {
+  position: relative;
+  float: left;
+  z-index: 9999;
+}
+
+.header_nav > .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+
+.header_nav > .navbar ul li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.header_nav > .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+
+.header_nav > .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header_nav > .navbar ul li:focus-within > ul,
+.header_nav > .navbar ul li:hover > ul {
+  display: inline;
+}
+
+#menu-bar {
+  display: none;
+}
+
+.header_nav > label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .header_nav {
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header_nav > label {
+    display: inline;
+  }
+  .header_nav > .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  .header_nav > .navbar ul li {
+    width: 100%;
+  }
+  .header_nav > .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  .header_nav > .navbar ul li ul li {
+    background: #eee;
+  }
+  .header_nav > .navbar ul li ul li ul {
+    width: 100%;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #0c0c0c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .container {
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .container .info {
+  margin-right: 30px;
+}
+
+footer .container .info.aboutus {
+  width: 40%;
+}
+
+footer .container h2 {
+  position: relative;
+  color: #d1cece;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .container h2:before {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #01bf71;
+}
+
+footer p {
+  color: #999;
+}
+
+.icon {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon li {
+  list-style: none;
+}
+
+.icon li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.icon li a:hover {
+  background: #01bf71;
+}
+
+.icon li a .fab {
+  color: #d1cece;
+  font-size: 20px;
+}
+
+.quickLinks {
+  position: relative;
+  width: 25%;
+}
+
+.quickLinks ul li {
+  list-style: none;
+}
+
+.quickLinks ul li a {
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover {
+  color: #01bf71;
+}
+
+.contact {
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .data {
+  position: relative;
+}
+
+.contact .data li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contact .data li span:nth-child(1) {
+  color: #d1cece;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .data li span {
+  color: #999;
+}
+
+.contact .data li a {
+  color: #999;
+  text-decoration: none;
+}
+
+.contact .data li a:hover {
+  color: #01bf71;
+}
+
+.copyrightText {
+  width: 100%;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 64em) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container .info {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .container .info.aboutus,
+  .quickLinks,
+  .contact {
+    width: 100%;
+  }
+  .copyrightText {
+    padding: 8px 40px;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+/*# sourceMappingURL=App.css.map */
